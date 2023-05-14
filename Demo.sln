@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IoC_DIP_DI_Container_Demo", "IoC_DIP_DI_Demo\IoC_DIP_DI_Container_Demo.csproj", "{9B3D3C08-7932-4A16-AB67-32695BC597B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository_UnitOfWork", "Repository_UnitOfWork\Repository_UnitOfWork.csproj", "{193A782F-B6D3-4618-A1DE-142E45BAFF60}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B3D3C08-7932-4A16-AB67-32695BC597B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B3D3C08-7932-4A16-AB67-32695BC597B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B3D3C08-7932-4A16-AB67-32695BC597B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B3D3C08-7932-4A16-AB67-32695BC597B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{193A782F-B6D3-4618-A1DE-142E45BAFF60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{193A782F-B6D3-4618-A1DE-142E45BAFF60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{193A782F-B6D3-4618-A1DE-142E45BAFF60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{193A782F-B6D3-4618-A1DE-142E45BAFF60}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C63A626-0264-41F9-A31F-9BF03B8E602F}
+	EndGlobalSection
+EndGlobal

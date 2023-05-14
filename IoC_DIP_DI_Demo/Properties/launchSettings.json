@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "IoC_DIP_DI_Container_Demo": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:54788;http://localhost:54789"
+    }
+  }
+}
