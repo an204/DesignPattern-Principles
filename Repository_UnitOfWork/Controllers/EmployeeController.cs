@@ -7,16 +7,15 @@ using Repository_UnitOfWork.UOW;
 
 namespace Repository_UnitOfWork.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class EmployeeController : ControllerBase
     {
         private UnitOfWork UnitOfWork = new UnitOfWork();
         public EmployeeController()
         {
         }
-        // GET: api/<EmployeeController>
-        [HttpGet]
+        [HttpGet(Name = "GetEmployee")] 
         public IEnumerable<Employee> Get()
         {
             return UnitOfWork.EmployeeRepo.Get();

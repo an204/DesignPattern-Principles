@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Repository_UnitOfWork.Data;
+using Repository_UnitOfWork.Middleware;
 using Repository_UnitOfWork.Repo;
 using System.Configuration;
 
@@ -21,21 +22,27 @@ namespace Repository_UnitOfWork
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddSession();
             builder.Services.AddSwaggerGen();
 
-            var app = builder.Build();
+            builder.Services.AddMvc();
 
+            var app = builder.Build();
+            app.UseSession();
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
+                // authenticate login to swagger
+                app.UseSwaggerAuthorized();
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
 
-            app.UseHttpsRedirection();
-
+            app.MapControllerRoute(
+            name: "default",
+             pattern: "{controller=Home}/{action=Index}/{id?}");
+            app.UseRouting();
             app.UseAuthorization();
-
             app.MapControllers();
 
             app.Run();
